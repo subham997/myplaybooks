@@ -1,0 +1,15 @@
+--- # add user through loops
+- hosts: webservers
+  become: yes
+  user: ansible
+  connection: ssh
+
+  tasks:
+        - name: userloops
+          user: name='{{item}}' state=present
+          with_items: 
+                      - sai
+                      - hari
+                      - bikash
+                      - vishal
+                      - suraj

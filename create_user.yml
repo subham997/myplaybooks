@@ -1,0 +1,10 @@
+--- #Creating user
+  - name : user creation
+    hosts: all
+    become: yes
+    connection: ssh
+    tasks: 
+          - name: creation of new user
+            user: name=subham
+
+

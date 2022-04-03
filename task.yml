@@ -1,0 +1,11 @@
+--- # my target section palybook
+   - hosts : webservers
+     user  : ansible
+     become : yes
+     connection : ssh
+
+     tasks:     
+               - name : Installing httpd
+                 action : yum name=httpd state=installed 
+                 ignore_errors : yes
+                  

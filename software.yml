@@ -1,0 +1,10 @@
+--- # insatll git software
+- hosts : webservers
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+    - name : insatll software git
+      yum: 
+           name: git
+           state: installed

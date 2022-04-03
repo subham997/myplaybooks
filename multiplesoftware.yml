@@ -1,0 +1,11 @@
+--- #multiple softwares
+- hosts: webservers
+  become: yes
+  connection: ssh
+
+  tasks:
+    - name: multiple softwares installtion
+      yum:
+        name: ['git','docker','mysql','php']
+        state: installed
+        

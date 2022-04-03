@@ -1,0 +1,16 @@
+--- 
+- name : sw installtion
+  hosts: all
+  connection: ssh
+  become: yes
+  
+  tasks: 
+     - name : installion sw and service start
+       yum: 
+            name: httpd
+            state: installed
+
+     - name : service starts httpd
+       service:
+               name: httpd
+               state: started   
